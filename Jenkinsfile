@@ -6,12 +6,11 @@ pipeline{
                 echo "CI successfull"  
             }
         }
-    }
-     stages{
+
         stage('CD'){
             steps{
                 sh'''
-                sudo mv index.html /var/www/html
+                mv index.html /var/www/html
                 ''' 
             }
         }
